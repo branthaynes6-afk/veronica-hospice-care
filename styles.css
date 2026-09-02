@@ -53,6 +53,12 @@ a {
   font-size: 1.25rem;
   font-weight: 700;
 }
+.brand img {
+    display: block;
+    width: 150px;
+    height: 55px;
+    object-fit: contain;
+}
 
 .nav-call {
   text-decoration: none;
