@@ -49,15 +49,7 @@ a {
 }
 
 .brand {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-.brand img {
-    display: block;
-    width: 150px;
-    height: 55px;
-    object-fit: contain;
+  min-width: 1px;
 }
 
 .nav-call {
@@ -68,7 +60,7 @@ a {
 
 .hero {
   background: linear-gradient(135deg, #f7f4ee 0%, #eef5f1 100%);
-  padding: 88px 0;
+  padding: 72px 0 88px;
 }
 
 .hero-grid {
@@ -76,6 +68,16 @@ a {
   grid-template-columns: 1.35fr .8fr;
   gap: 64px;
   align-items: center;
+}
+
+/* Large Care 4 You logo above the hero heading */
+.hero-logo {
+  display: block;
+  width: 360px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 0 28px 0;
 }
 
 .eyebrow {
@@ -94,11 +96,14 @@ a {
   color: #dbe9e4;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin-top: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: "Playfair Display", Georgia, serif;
 }
 
@@ -160,7 +165,7 @@ h1 {
 }
 
 .contact-card {
-  background: rgba(255,255,255,.92);
+  background: rgba(255, 255, 255, .92);
   border: 1px solid var(--line);
   padding: 34px;
   border-radius: 20px;
@@ -265,7 +270,7 @@ h1 {
 }
 
 .btn-outline-light {
-  border: 1px solid rgba(255,255,255,.75);
+  border: 1px solid rgba(255, 255, 255, .75);
   color: var(--white);
 }
 
@@ -314,51 +319,7 @@ footer {
   font-size: .85rem;
 }
 
-@media (max-width: 820px) {
-  .hero {
-    padding: 64px 0;
-  }
-
-  .hero-grid,
-  .cards,
-  .footer-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-grid {
-    gap: 34px;
-  }
-
-  .cta-inner {
-    display: block;
-  }
-
-  .cta-actions {
-    margin-top: 24px;
-  }
-}
-
-@media (max-width: 520px) {
-  .container {
-    width: min(100% - 28px, 1120px);
-  }
-
-  h1 {
-    font-size: 2.55rem;
-  }
-
-  .hero-actions .btn,
-  .cta-actions .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .contact-card {
-    padding: 26px 22px;
-  }
-}
-
-
+/* Veronica profile card */
 .profile-card {
   padding: 0;
   overflow: hidden;
@@ -383,6 +344,32 @@ footer {
 }
 
 @media (max-width: 820px) {
+  .hero {
+    padding: 54px 0 64px;
+  }
+
+  .hero-grid,
+  .cards,
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    gap: 34px;
+  }
+
+  .hero-logo {
+    width: 300px;
+  }
+
+  .cta-inner {
+    display: block;
+  }
+
+  .cta-actions {
+    margin-top: 24px;
+  }
+
   .profile-photo {
     height: 460px;
     object-position: center 15%;
@@ -390,6 +377,33 @@ footer {
 }
 
 @media (max-width: 520px) {
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  h1 {
+    font-size: 2.55rem;
+  }
+
+  .hero-logo {
+    width: 240px;
+    margin-bottom: 22px;
+  }
+
+  .hero-actions .btn,
+  .cta-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-card {
+    padding: 26px 22px;
+  }
+
+  .profile-card {
+    padding: 0;
+  }
+
   .profile-photo {
     height: 380px;
   }
