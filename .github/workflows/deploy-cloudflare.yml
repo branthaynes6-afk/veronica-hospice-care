@@ -22,4 +22,4 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npx --yes wrangler@4 deploy
 
-# retrigger after updating both repository secrets
+# fresh trigger after recreating both repository secrets
