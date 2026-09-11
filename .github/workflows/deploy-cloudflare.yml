@@ -22,4 +22,4 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npx --yes wrangler@4 deploy
 
-# trigger after replacing Cloudflare API token
+# trigger after re-saving both Cloudflare secrets
