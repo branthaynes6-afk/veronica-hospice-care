@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --ink: #173239;
   --muted: #607277;
@@ -52,10 +56,23 @@ a {
   min-width: 1px;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link,
 .nav-call {
   text-decoration: none;
   font-weight: 700;
   color: var(--sage-dark);
+}
+
+.nav-link:hover,
+.nav-call:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .hero {
@@ -208,6 +225,14 @@ h1 {
   margin-bottom: 44px;
 }
 
+.section-intro {
+  max-width: 820px;
+  margin: -20px auto 36px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -240,6 +265,62 @@ h1 {
   color: var(--sage-dark);
   font-weight: 800;
   margin-bottom: 18px;
+}
+
+.therapy-section {
+  background: linear-gradient(180deg, #f8fbf9 0%, #f3f7f5 100%);
+  scroll-margin-top: 82px;
+}
+
+.therapy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.therapy-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(44, 74, 67, .05);
+  overflow: hidden;
+}
+
+.therapy-card:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.therapy-card summary {
+  padding: 22px 24px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.22rem;
+  color: var(--ink);
+}
+
+.therapy-card summary::marker {
+  color: var(--sage-dark);
+}
+
+.therapy-card[open] summary {
+  border-bottom: 1px solid var(--line);
+  background: #fbfcfb;
+}
+
+.therapy-card p {
+  margin: 0;
+  padding: 20px 24px 24px;
+  color: var(--muted);
+}
+
+.therapy-note {
+  max-width: 860px;
+  margin: 28px auto 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: .92rem;
 }
 
 .cta {
@@ -350,6 +431,7 @@ footer {
 
   .hero-grid,
   .cards,
+  .therapy-grid,
   .footer-inner {
     grid-template-columns: 1fr;
   }
@@ -381,6 +463,15 @@ footer {
     width: min(100% - 28px, 1120px);
   }
 
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-link,
+  .nav-call {
+    font-size: .92rem;
+  }
+
   h1 {
     font-size: 2.55rem;
   }
@@ -410,5 +501,13 @@ footer {
 
   .profile-content {
     padding: 24px 22px 28px;
+  }
+
+  .therapy-card summary {
+    padding: 18px 20px;
+  }
+
+  .therapy-card p {
+    padding: 18px 20px 22px;
   }
 }
